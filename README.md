@@ -11,6 +11,8 @@ La subtilité de cette question est de ne pas utiliser *printf()*. Nous préfér
 
     write(int filedes, const void *buffer, size_t size);
 
+Nous retournons du texte en écrivant dans le ''fichier'' *STDOUT_FILENO*.
+
 ---
 
 >**Question 2** Exécution de la commande saisie et retour au prompt
