@@ -29,5 +29,7 @@ Une fois le text recupéré, nous devons l'executer si il s'agit d'une commande.
 Avant d'executer une ligne de code, nous devons faire un *fork()*. En effet, nous voulons que notre shell soit toujours actif au retour du programme appelé.
 Pour ce faire, seul le processus fils execute la commande. Le processus père attend que le processus fils retourne pour reprendre l'execution du shell.
 
+---
+
 >**Question 3** Gestion de la sortie du shell avec la commande “exit” ou un <ctrl>+d
     
