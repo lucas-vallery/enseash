@@ -37,13 +37,13 @@ L'entièreté du code s'execute dans une boucle infinie. Pour le quitter il suff
     
     if(strncmp(buffer, EXIT_TXT, strlen(EXIT_TXT)) == 0)
     
-En effet, on ne compare pas l'intégralité de la chaine saisie dans le shell mais seulements les premiers caractères (ceux de ''exit''). Ceci permet d'éliminer les problèmes de comparaisons dus à la présence du \n à la fin de la ligne saisie dans le shell.
+Nous ne comparons pas l'intégralité de la chaine saisie dans le shell mais seulements les premiers caractères (ceux de ''exit''). Ceci permet d'éliminer les problèmes de comparaisons dus à la présence du \n à la fin de la ligne saisie dans le shell.
 
 ---
     
 >**Question 4** Affichage du code de retour (ou du signal) de la commande précédente dans le prompt
     
-Plutôt d'executer un ''wait(NULL)'', le père execute un ''wait(&status)''. Ceci permet d'attendre que le fils change d'état (se termine) et de stocker son statut afin d'y accéder plus tard à l'aide de 
+Plutôt d'executer un *wait(NULL)*, le père execute un *wait(&status)*. Ceci permet d'attendre que le fils change d'état (se termine) et de stocker son statut afin d'y accéder plus tard à l'aide de 
     
     WEXITSTATUS(status)
     
