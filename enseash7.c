@@ -67,9 +67,17 @@ char* checkForRedirection (char* message){
 	if(pos != NULL){
 		*pos = '\0';
 
+		//On retire les ' ' avant '>'
+		char* posCpy = pos - 1;
+		while(strncmp(posCpy, " ", strlen(" ")) == 0){
+			*posCpy = '\0';
+			posCpy--;
+		}
+
+		//On retire les ' ' après '>'
 		pos ++;
-		while(*pos != ' ')
-		pos++;									//////////////ICI/////////////////
+		while(strncmp(pos, " ", strlen(" ")) == 0)
+			pos++;
 
 		return pos;
 	}
